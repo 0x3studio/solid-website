@@ -61,18 +61,18 @@
   {/if}
 
   {#if $errors.email}
-    <p class="text-sm md:text-base text-center text-red-500">
+    <p class="text-sm md:text-base text-center text-red-700">
       This is not a valid email address.
     </p>
   {:else}
     {#if serverError}
-      <p class="text-sm md:text-base text-center text-red-500">
+      <p class="text-sm md:text-base text-center text-red-700">
         An error occurred while submitting your email address. Please refresh
         the page and try again.
       </p>
     {/if}
     {#if serverSuccess}
-      <p class="text-sm md:text-base text-center text-green-500">
+      <p class="text-sm md:text-base text-center text-green-700">
         Thank you! We&apos;ll be in touch as soon as we&apos;re ready.
       </p>
     {/if}
