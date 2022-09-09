@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, body > div {
+html,
+body,
+body > div {
   height: 100%;
 }
 
 body {
-  background-image: linear-gradient(#8360c3, #2ebf91);
+  background: linear-gradient(-40.37deg, #da8aff -3.24%, #ff6231 101.81%),
+    #18191b;
   color: #fff;
 }
