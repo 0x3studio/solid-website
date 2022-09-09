@@ -9,7 +9,7 @@ body > div {
 }
 
 body {
-  background: linear-gradient(-40.37deg, #da8aff -3.24%, #ff6231 101.81%),
-    #18191b;
+  background: linear-gradient(-40.37deg, #da8aff -3.24%, #ff6231 101.81%) fixed,
+    #ae83c3;
   color: #fff;
 }
