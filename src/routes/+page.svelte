@@ -66,7 +66,7 @@
             type="submit"
             disabled={!$isValid}
             class="shadow bg-blue-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded disabled:pointer-events-none disabled:opacity-50"
-            >Save</button
+            >🚀</button
           >
         </form>
       {/if}
@@ -204,7 +204,7 @@
     }
     :root {
       --font-size-h2: 1.5em;
-      --padding-layout: 2.5rem;
+      --padding-layout: 1.5rem;
       --max-width: 100%;
     }
   }
