@@ -132,7 +132,7 @@
   }
   .body {
     font-size: 1.8em;
-    line-height: 1em;
+    line-height: 1.15em;
     font-weight: 600;
   }
 
@@ -201,7 +201,7 @@
 
   :root {
     --font-size-h2: 2em;
-    --padding-layout: 5rem;
+    --padding-layout: 2rem;
     --max-width: 680px;
   }
 
@@ -212,6 +212,7 @@
 
   @media (max-width: 768px) {
     footer {
+      padding-top: 2rem;
       padding-bottom: 2rem;
       position: unset;
       top: unset;
@@ -227,7 +228,7 @@
     }
     :root {
       --font-size-h2: 1.5em;
-      --padding-layout: 1.5rem;
+      --padding-layout: 2.5rem;
       --max-width: 100%;
     }
   }
