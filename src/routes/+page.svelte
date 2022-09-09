@@ -141,7 +141,7 @@
     flex-wrap: wrap;
     align-items: center;
     padding: var(--padding-layout);
-    gap: 1rem;
+    gap: var(--padding-layout);
   }
 
   .square {
