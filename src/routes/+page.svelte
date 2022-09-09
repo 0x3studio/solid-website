@@ -118,7 +118,7 @@
   footer {
     position: absolute;
     bottom: var(--padding-layout);
-    left: var(--padding-layout);
+    right: var(--padding-layout);
   }
   .container {
     display: flex;
