@@ -6,6 +6,7 @@
 
   let serverSuccess = false;
   let serverError = false;
+  let inputField;
 
   const { form, errors, isValid, reset } = createForm({
     onSuccess() {
@@ -47,38 +48,38 @@
       </h2>
     </div>
     <div class="square trio">
-      {#if !serverError && !serverSuccess}
-        <p class="body mb-3">
-          Get notified by email <br />and join the beta program 👇
-        </p>
-        <form
-          use:form
-          action="/api/save-email"
-          method="post"
-          class="flex gap-x-2"
+      <p class="body mb-3">
+        Get notified by email <br />and join the beta program 👇
+      </p>
+      <form
+        use:form
+        action="/api/save-email"
+        method="post"
+        class="flex gap-x-2"
+      >
+        <input
+          bind:this={inputField}
+          on:change={() => (serverSuccess = false)}
+          type="text"
+          name="email"
+          placeholder="Type your email"
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        />
+        <button
+          type="submit"
+          disabled={!$isValid}
+          class="shadow bg-blue-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded disabled:pointer-events-none disabled:opacity-50"
+          >🚀</button
         >
-          <input
-            type="text"
-            name="email"
-            placeholder="Type your email"
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          />
-          <button
-            type="submit"
-            disabled={!$isValid}
-            class="shadow bg-blue-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded disabled:pointer-events-none disabled:opacity-50"
-            >🚀</button
-          >
-        </form>
-      {/if}
+      </form>
 
-      {#if $errors.email}
+      {#if $errors.email && inputField?.value.length > 0}
         <p class="text-sm md:text-base mt-3 error">
           This is not a valid email address.
         </p>
       {:else}
         {#if serverError}
-          <p class="text-sm md:text-base error">
+          <p class="text-sm md:text-base mt-3 error">
             An error occurred while submitting your email address. <a
               href="/"
               style="text-decoration: underline;"
@@ -87,7 +88,9 @@
           </p>
         {/if}
         {#if serverSuccess}
-          <h2 class="thankyou">Thank you! <br />We&apos;ll be in touch 🚀</h2>
+          <p class="text-sm md:text-base mt-3  error">
+            Thank you! We&apos;ll be in touch 🚀
+          </p>
         {/if}
       {/if}
     </div>
