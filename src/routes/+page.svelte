@@ -44,7 +44,7 @@
 
     <div class="square duo">
       <h2 class="body">
-        A revolutionnary decentralized content publishing platform.
+        A revolutionary decentralized content publishing platform.
       </h2>
     </div>
     <div class="square trio">
@@ -84,7 +84,7 @@
               href="/"
               style="text-decoration: underline;"
               on:click|preventDefault={refreshForm}>Please, try again</a
-            >
+            >.
           </p>
         {/if}
         {#if serverSuccess}
@@ -101,7 +101,7 @@
       <img
         src="/logo-0x3-studio.svg"
         width="134"
-        alt="The beautiful and now famous logo of 0X3 studio"
+        alt="The beautiful and now famous logo of 0x3 Studio"
       /></a
     >
   </footer>
