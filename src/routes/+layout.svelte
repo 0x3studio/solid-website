@@ -9,7 +9,7 @@
     property="og:description"
     content="Solid, decentralized content platform"
   />
-  <meta property="og:image" content="https://solid.0x3.studio/solid.png" />
+  <meta property="og:image" content="https://solid.0x3.studio/intro.png" />
   <meta property="og:title" content="Solid by 0x3 Studio" />
 </svelte:head>
 <slot />
